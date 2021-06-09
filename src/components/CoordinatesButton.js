@@ -6,13 +6,12 @@ export default class CoordinatesButton extends Component {
         super ()
 
     }
+    
+    handleClick = (event) => {
+        return this.props.onReceiveCoordinates([event.clientX, event.clientY])
+    }
 
-        handleClick = (event) => {
-            event.persist()
-            setTimeout(() => this.props.onDelayedClick(event), this.props.delay)
-        }
-
-        render() {
-            return <button onClick={this.handleClick}></button>
-        }
+    render() {
+        return <button onClick={this.handleClick}></button>
+    }
 }
