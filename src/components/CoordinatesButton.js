@@ -6,7 +6,7 @@ export default class CoordinatesButton extends Component {
         super ()
 
     }
-    
+
     handleClick = (event) => {
         return this.props.onReceiveCoordinates([event.clientX, event.clientY])
     }
